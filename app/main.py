@@ -3,9 +3,9 @@ import math
 
 
 class Vector:
-    def __init__(self, x : float, y : float) -> None:
-        self.x = round(x, 2)
-        self.y = round(y, 2)
+    def __init__(self, x_axis : float, y_axis : float) -> None:
+        self.x = round(x_axis, 2)
+        self.y = round(y_axis, 2)
 
     def __add__(self, another : Vector) -> Vector:
         return Vector(self.x + another.x, self.y + another.y)
@@ -21,7 +21,7 @@ class Vector:
 
     @classmethod
     def create_vector_by_two_points(cls, start_point : tuple,
-                                    end_point: tuple) :
+                                    end_point: tuple) -> Vector:
         start_point_list = []
         for i in start_point:
             start_point_list.append(i)
